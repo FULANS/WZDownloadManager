@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1B3834C1F95F3EF0078FEE1 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B3834B1F95F3EF0078FEE1 /* RootVC.m */; };
 		D1C7B5911E49692D00778C67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C7B5901E49692D00778C67 /* main.m */; };
 		D1C7B5941E49692D00778C67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C7B5931E49692D00778C67 /* AppDelegate.m */; };
 		D1C7B59C1E49692D00778C67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C7B59B1E49692D00778C67 /* Assets.xcassets */; };
 		D1C7B59F1E49692D00778C67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C7B59D1E49692D00778C67 /* LaunchScreen.storyboard */; };
 		D1C7B5A91E49697400778C67 /* WZDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C7B5A81E49697400778C67 /* WZDownloadModel.m */; };
 		D1C7B5AC1E496C7600778C67 /* WZDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C7B5AB1E496C7600778C67 /* WZDownloadManager.m */; };
-		D1C7B5B01E499D4800778C67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C7B5AE1E499D4800778C67 /* ViewController.m */; };
 		D1C7B5B11E499D4800778C67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C7B5AF1E499D4800778C67 /* Main.storyboard */; };
+		D1F5ABC91F99DF350020DEE4 /* DownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F5ABC81F99DF350020DEE4 /* DownListView.m */; };
+		D1F5ABCC1F99DF530020DEE4 /* DownListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F5ABCB1F99DF530020DEE4 /* DownListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1B3834A1F95F3EF0078FEE1 /* RootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootVC.h; sourceTree = "<group>"; };
+		D1B3834B1F95F3EF0078FEE1 /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
 		D1C7B58C1E49692C00778C67 /* WZDownloadManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZDownloadManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C7B5901E49692D00778C67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1C7B5921E49692D00778C67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,9 +33,11 @@
 		D1C7B5A81E49697400778C67 /* WZDownloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZDownloadModel.m; sourceTree = "<group>"; };
 		D1C7B5AA1E496C7600778C67 /* WZDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZDownloadManager.h; sourceTree = "<group>"; };
 		D1C7B5AB1E496C7600778C67 /* WZDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZDownloadManager.m; sourceTree = "<group>"; };
-		D1C7B5AD1E499D4800778C67 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D1C7B5AE1E499D4800778C67 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D1C7B5AF1E499D4800778C67 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D1F5ABC71F99DF350020DEE4 /* DownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownListView.h; sourceTree = "<group>"; };
+		D1F5ABC81F99DF350020DEE4 /* DownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownListView.m; sourceTree = "<group>"; };
+		D1F5ABCA1F99DF530020DEE4 /* DownListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownListCell.h; sourceTree = "<group>"; };
+		D1F5ABCB1F99DF530020DEE4 /* DownListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,6 @@
 		D1C7B58E1E49692D00778C67 /* WZDownloadManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D1C7B5AD1E499D4800778C67 /* ViewController.h */,
-				D1C7B5AE1E499D4800778C67 /* ViewController.m */,
 				D1C7B5AF1E499D4800778C67 /* Main.storyboard */,
 				D1C7B5921E49692D00778C67 /* AppDelegate.h */,
 				D1C7B5931E49692D00778C67 /* AppDelegate.m */,
@@ -74,6 +78,12 @@
 				D1C7B59D1E49692D00778C67 /* LaunchScreen.storyboard */,
 				D1C7B5A01E49692D00778C67 /* Info.plist */,
 				D1C7B58F1E49692D00778C67 /* Supporting Files */,
+				D1B3834A1F95F3EF0078FEE1 /* RootVC.h */,
+				D1B3834B1F95F3EF0078FEE1 /* RootVC.m */,
+				D1F5ABC71F99DF350020DEE4 /* DownListView.h */,
+				D1F5ABC81F99DF350020DEE4 /* DownListView.m */,
+				D1F5ABCA1F99DF530020DEE4 /* DownListCell.h */,
+				D1F5ABCB1F99DF530020DEE4 /* DownListCell.m */,
 			);
 			path = WZDownloadManagerDemo;
 			sourceTree = "<group>";
@@ -169,11 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F5ABC91F99DF350020DEE4 /* DownListView.m in Sources */,
+				D1B3834C1F95F3EF0078FEE1 /* RootVC.m in Sources */,
 				D1C7B5AC1E496C7600778C67 /* WZDownloadManager.m in Sources */,
 				D1C7B5941E49692D00778C67 /* AppDelegate.m in Sources */,
 				D1C7B5A91E49697400778C67 /* WZDownloadModel.m in Sources */,
+				D1F5ABCC1F99DF530020DEE4 /* DownListCell.m in Sources */,
 				D1C7B5911E49692D00778C67 /* main.m in Sources */,
-				D1C7B5B01E499D4800778C67 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +336,7 @@
 				D1C7B5A51E49692D00778C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

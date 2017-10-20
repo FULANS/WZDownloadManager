@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RootVC.h"
+#import "WZDownloadManager.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSLog(@"本地沙盒%@",NSHomeDirectory());
+    
+    _window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    
+    RootVC *vc = [[RootVC alloc] init];
+    vc.title = @"导航栏的使用";
+    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:vc];
+    _window.rootViewController = navc;
+    [_window makeKeyAndVisible];
+   
+    UIStoryboard * SB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _downVC = (DownListView *)[SB instantiateViewControllerWithIdentifier:@"DownListView"];
+    
+    // 下载工具类设置:
+    [WZDownloadManager sharedManager].saveFilesDirectory = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"CustomDownloadDirectory"];
+    [WZDownloadManager sharedManager].maxConcurrentCount = 2;
+    [WZDownloadManager sharedManager].waitingQueueMode = WZWaitingQueueModeFILO;
+    
     return YES;
 }
 

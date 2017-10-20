@@ -11,10 +11,22 @@
 @implementation WZDownloadModel
 
 - (void)closeOutputStream {
-    if (_outputStream) {
-        [_outputStream close];
-        _outputStream = nil;
+    
+    if (!_outputStream) {
+        return;
     }
+    if (_outputStream.streamStatus > NSStreamStatusNotOpen && _outputStream.streamStatus < NSStreamStatusClosed) {
+        [_outputStream close];
+    }
+    _outputStream = nil;
+}
+
+- (void)openOutputStream {
+    
+    if (!_outputStream) {
+        return;
+    }
+    [_outputStream open];
 }
 
 @end
