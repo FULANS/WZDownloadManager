@@ -36,8 +36,6 @@ typedef NS_ENUM(NSInteger, WZDownloadState) {
 
 @property (nonatomic, copy) void (^completion)(BOOL isSuccess, NSString *filePath, NSError *error);
 
-//@property (nonatomic,weak) UIViewController *targetvc;
-
 - (void)closeOutputStream;
 
 - (void)openOutputStream;

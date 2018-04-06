@@ -121,6 +121,8 @@ stringByAppendingPathComponent:NSStringFromClass([self class])]
     WZDownloadModel *downloadModel = self.downloadModelsDic[WZFileName(URL)];
     
     if (downloadModel) { // if the download model of this URL has been added in downloadModelsDic
+        downloadModel.progress = progress;
+        downloadModel.completion = completion;
         return;
     }
     
@@ -200,7 +202,6 @@ stringByAppendingPathComponent:NSStringFromClass([self class])]
     });
     
 }
-
 // getted done
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
     
@@ -556,5 +557,18 @@ stringByAppendingPathComponent:NSStringFromClass([self class])]
         [fileManager removeItemAtPath:filePath error:nil];
     }
 }
+
+/*
+ <LKDownLoadModel: 0x1c4294cd0>
+ <__NSCFLocalDataTask: 0x111d2ae60>{ taskIdentifier: 1 } { running }
+
+ 
+ <LKDownLoadModel: 0x1c4294cd0>
+ <__NSCFLocalDataTask: 0x111d2ae60>{ taskIdentifier: 1 } { suspended }
+ 
+ 
+ <LKDownLoadModel: 0x1c4294cd0>
+ <__NSCFLocalDataTask: 0x111d2ae60>{ taskIdentifier: 1 } { suspended }
+ */
 
 @end
