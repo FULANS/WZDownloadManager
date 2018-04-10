@@ -20,8 +20,6 @@ stringByAppendingPathComponent:NSStringFromClass([self class])]
 
 @interface WZDownloadManager () <NSURLSessionDelegate, NSURLSessionDataDelegate>
 
-@property (nonatomic, strong) NSURLSession *urlSession;
-
 @property (nonatomic, strong) NSMutableDictionary *downloadModelsDic; // a dictionary contains downloading and waiting models
 
 @property (nonatomic, strong) NSMutableArray *downloadingModels; // a array contains models which are downloading now
@@ -34,16 +32,6 @@ stringByAppendingPathComponent:NSStringFromClass([self class])]
 @implementation WZDownloadManager
 
 #pragma mark --- lazy load
-- (NSURLSession *)urlSession {
-    
-    if (!_urlSession) {
-        _urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
-                                                    delegate:self
-                                               delegateQueue:[[NSOperationQueue alloc] init]];
-    }
-    return _urlSession;
-}
-
 - (NSMutableDictionary *)downloadModelsDic {
     
     if (!_downloadModelsDic) {
@@ -129,7 +117,9 @@ stringByAppendingPathComponent:NSStringFromClass([self class])]
     // means: the download model should be created
     NSMutableURLRequest *requestM = [NSMutableURLRequest requestWithURL:URL];
     [requestM setValue:[NSString stringWithFormat:@"bytes=%ld-", (long)[self hasDownloadedLength:URL]] forHTTPHeaderField:@"Range"];
-    NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:requestM];
+    NSURLSessionDataTask *dataTask = [[NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
+                                                                    delegate:self
+                                                               delegateQueue:[[NSOperationQueue alloc] init]] dataTaskWithRequest:requestM];
     dataTask.taskDescription = WZFileName(URL);
     
     downloadModel = [[WZDownloadModel alloc] init];
